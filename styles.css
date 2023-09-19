@@ -17,10 +17,10 @@
   --body-font: 'Poppins', sans-serif;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
+  --h3-font-size: 1.25rem;
   --normal-font-size: .938rem;
-  --small-font-size: .875rem;
-  --smaller-font-size: .813rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: .900rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -73,11 +73,12 @@ body.dark-theme{
 body.scale-cv{
     --h1-font-size: .938rem;
     --h2-font-size: .938rem;
-    --h3-font-size: .875rem;
+    --h3-font-size: 1rem;
     --normal-font-size: .813rem;
     --small-font-size: .75rem;
     --smaller-font-size: .688rem;
 }
+
 
 /*========== Generate PDF button ==========*/
 .generate-pdf{
@@ -452,6 +453,9 @@ img{
 .experience__title{
     font-size: var(--h3-font-size);
 }
+.experience__description{
+    font-size: .9rem;
+}
 
 .education__studies,
 .experience__company{
@@ -462,6 +466,27 @@ img{
 .education__year{
    font-size: var(--smaller-font-size); 
 }
+.custom-link {
+    display: inline-block;
+    padding: 5px 10px; /* Adjust padding as needed for button size */
+    background-color: #cdcdcd; /* Button background color */
+    color: #030303; /* Text color */
+    text-decoration: none; /* Remove underline */
+    border: 10px ; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-weight: semibold; /* Make text bold */
+    font-size: 12.5px;
+    font-family:  "Arial",sans-serif;
+    cursor: pointer; /* Add pointer cursor on hover */
+  }
+
+  /* Hover effect */
+  .custom-link:hover {
+    background-color: #dcdcdc; /* Change background color on hover */
+  }
+  
+
+
 /*========== SKILLS AND LANGUAGES ==========*/
 .skills__content,
 .languages__content{
