@@ -106,23 +106,32 @@ let opt = {
     jsPDF:        { format: 'a4', orientation: 'portrait' },
     allowTaint: true
   }
+
+  function generateResume() {
+    html2pdf(areaCv, opt);
+  }
   
-  let worker;
-
-// Function to call areaCv and Html2Pdf options 
-function generateResume(){
-    html2pdf(areaCv, opt)
-}
-
-// When the button is clicked, it executes the three functions
-resumeButton.addEventListener('click', () => {
+  // When the button is clicked, it executes the three functions
+  resumeButton.addEventListener('click', async () => {
     // 1. The class .scale-cv is added to the body, where it reduces the size of the elements
-    scaleCv()
-
-    // 2. The PDF is generated
-    generateResume()
-
-    // 3. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
-     setTimeout(removeScale,5000)
-})
+    scaleCv();
+  
+    // 2. Wait for some time to ensure elements are scaled before generating the PDF
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  
+    // 3. The PDF is generated
+    generateResume();
+  
+    // 4. The .scale-cv class is removed from the body after 5 seconds to return to normal size.
+    setTimeout(removeScale, 5000);
+  });
+  
+  function scaleCv() {
+    document.body.classList.add('scale-cv');
+  }
+  
+  function removeScale() {
+    document.body.classList.remove('scale-cv');
+  }
+  
     

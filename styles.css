@@ -93,7 +93,9 @@ body.scale-cv{
 
 .generate-pdf:hover{
     color: var(--title-color);
+
 }
+/*========== Page break ==========*/
 
 /*========== Classes modified to reduce size and print on A4 sheet ==========*/
 .scale-cv .change-theme,
@@ -451,7 +453,7 @@ img{
 
 .education__title,
 .experience__title{
-    font-size: var(--h3-font-size);
+    font-size: 17px;
 }
 .experience__description{
     font-size: .9rem;
@@ -459,7 +461,8 @@ img{
 
 .education__studies,
 .experience__company{
-    font-size: var(--small-font-size);
+    font-size: 15px;
+    font-weight: 401 ;
     color: var(--title-color);
 }
 
@@ -488,31 +491,61 @@ img{
 
 
 /*========== SKILLS AND LANGUAGES ==========*/
-.skills__content,
-.languages__content{
-    grid-template-columns: repeat(2, 1fr);
+
+
+.skills__content {
+    display: flex;
+    flex-direction: column;
 }
 
-.languages__content{
-    gap: 0;
+.skills__data {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Add some spacing between items */
 }
 
-.skills__name,
-.languages__name{
+.skills__category,
+.skills__item {
+    width: 100%; /* Take 100% width on smaller screens */
+    box-sizing: border-box;
+}
+
+.skills__category {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.skills__item {
     display: flex;
     align-items: center;
-    margin-bottom: var(--mb-3);
+    margin-bottom: 0.25rem;
 }
 
-.skills__circle,
-.languages__circle{
-    display: inline-block;
+.skills__circle {
     width: 5px;
     height: 5px;
     background-color: var(--text-color);
     border-radius: 50%;
-    margin-right: .75rem;
+    margin-right: 0.5rem;
 }
+
+/* Additional styles for larger screens */
+@media (min-width: 768px) {
+    .skills__data {
+        width: 50%; /* Display items side by side on larger screens */
+    }
+
+    .skills__category,
+    .skills__item {
+        width: 100%; /* Take 100% width on larger screens */
+    }
+}
+
+
+
+
+
+
 /*========== CERTIFICATES ==========*/
 .certificate__title{
     font-size: var(--h3-font-size);
