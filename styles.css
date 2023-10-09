@@ -410,7 +410,7 @@ img{
     display: inline-flex;
     align-items: center;
     font-size: var(--small-font-size);
-    color: var(--text-color);
+    color: rgb(102, 102, 102);
 }
 
 .social__link:hover{
@@ -535,7 +535,7 @@ img{
     margin-bottom: 0.25rem;
 }
 
-.skills__circle {
+.skills__circle { 
     width: 5px;
     height: 5px;
     background-color: var(--text-color);
@@ -567,8 +567,8 @@ img{
 }
 
 /*========== REFERENCES ==========*/
-/* .references__content{
-    gap: 0.25rem;
+/* .references__content{   
+    gap: 0.25rem;  
 }
 
 .references__subtitle{
