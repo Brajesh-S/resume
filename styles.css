@@ -584,7 +584,7 @@ img{
     font-size: var(--h3-font-size);
 } */
 
-/*========== INTERESTS ==========*/
+  /*========== INTERESTS ==========*/
 .interests__container{
     grid-template-columns: repeat(3, 1fr);
     margin-top: var(--mb-2);
