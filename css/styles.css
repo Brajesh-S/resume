@@ -496,6 +496,7 @@ img{
     background-color: var(--text-color);
     border-radius: 50%;
     margin-right: .75rem;
+    
 }
 /*========== CERTIFICATES ==========*/
 .certificate__title{
